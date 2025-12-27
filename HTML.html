@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Magic Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-center w3-button w3-hide-small"><div></div><b>Express your love for BTS 💜  Made by  <span class="w3-tag">ARMY</span></a>
+    <!-- Right-sided navbar links -->
+    </div>
+  </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Header -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="btsbanner5.jpg" style="width: 1550px;%" class="w3-hover-opacity"> 
+    <div class="w3-display-middle w3-container w3-text-white w3-padding-32 w3-hide-small"> 
+    </div>
+  </div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-purple w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>MAGIC<br>SHOP</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#apparel" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Apparel</a> 
+    <a href="#merchandise" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Merchandise</a> 
+    <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About us</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+<!-- !ALIGN TEXT! -->
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+</html>
+
+
+  <!-- HOME -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>ARMYVERSE</b></h1>
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Showcase.</b></h1>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="BTS 1.jpg" style="width:100%" onclick="onClick(this)" alt="Photo session">
+      <img src="bts 2.jpg" style="width:100%" onclick="onClick(this)" alt="World tour around 2017">
+    </div>
+
+    <div class="w3-half">
+      <img src="bts 3.jpg" style="width:100%" onclick="onClick(this)" alt="World tour 2021">
+      <img src="bts 4.png" style="width:100%" onclick="onClick(this)" alt="First hot album">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Apparel -->
+  <div class="w3-container" id="apparel" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Apparel</b></h1>
+      <p><b>Featured Products</b>:</p>
+  </div>
+
+    <!-- Product Name-->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="app1.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>BoraHeart</h3>
+          <p class="w3-opacity">Unisex Classic Pullover Hoodie</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="app2.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>Love Myself</h3>
+          <p class="w3-opacity">Unisex Classic Pullover Hoodie</p>
+        </div>
+      </div>
+    </div>
+  <div class="w3-col m4 w3-margin-bottom"><div class="w3-light-grey">
+        <img src="app3.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>Only You In My Eyes</h3>
+          <p class="w3-opacity">Unisex Classic Pullover Hoodie</p>
+        </div>
+      </div>
+    </div>
+      <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="app4.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>Waves Of Life</h3>
+          <p class="w3-opacity">Unisex Premium Pullover Hoodie</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="app5.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>Panda Vibes</h3>
+          <p class="w3-opacity">Embroidered Soft-Wash Hoodie</p>
+        </div>
+      </div>
+    </div>
+  <div class="w3-col m4 w3-margin-bottom"><div class="w3-light-grey">
+        <img src="app6.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>Believe In Yourself</h3>
+          <p class="w3-opacity">Unisex Classic t-Shirt</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Merchandise -->
+  <div class="w3-container" id="merchandise" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Merchandise.</b></h1>
+    <p><b>Featured Products</b>:</p>
+  </div>
+
+  <!-- Product Name-->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="m1.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>BTSCN</h3>
+          <p class="w3-opacity">Stylized short form of “BTS Scene”</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="m2.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>ONSET</h3>
+          <p class="w3-opacity">Inspired by their song ON</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="m3.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>RUN7</h3>
+          <p class="w3-opacity">Dynamic and youthful</p>
+        </div>
+      </div>
+    </div>
+  <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="m4.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>HYBE7</h3>
+          <p class="w3-opacity">For modern, minimal branding</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="m5.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>BTSZN</h3>
+          <p class="w3-opacity">“BTS Season,” trendy slang</p>
+        </div>
+      </div>
+    </div>
+  <div class="w3-col m4 w3-margin-bottom"><div class="w3-light-grey">
+        <img src="m6.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <div class="w3-container">
+          <h3>UNIVER7E</h3>
+          <p class="w3-opacity">Aesthetic version of “Universe”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- About us -->
+  <div class="w3-container" id="aboutus" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>About Us.</b></h1>
+    <p><b>✨ Step into a world where music meets comfort, and every design carries the heart of BTS and ARMY !</b></p>
+    <p>Magic Shop is a BTS inspired "Pre-ordered" online store created for ARMYs who believe in love, hope, and self expression. Just like the song “Magic Shop,” this space is a comfort zone where every item tells a story of connection between BTS and their fans. Our collections are designed to inspire confidence, warmth, and positivity in your daily life. Step inside, find your magic, and wear your love proudly.💜 </p>
+    <p>Here, every product carries a piece of the BTS spirit and the love of ARMY. We believe that even small things like a sweater, a tumbler, a sticker can bring comfort and joy. Each design is made with passion, inspired by the message of “Love Yourself.” This is more than a shop it’s a home where music, dreams, and purple hearts come together.🌙✨</p>
+    </p>
+  </div>
+
+  <!-- layout -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+  
+  </div>
+</div>
+
+<!-- Navbar (sit on bottom) -->
+<div class="w3-bottom">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <audio controls autoplay muted>
+        <div class="w3-display-middle w3-hide-small"></div>
+  <source src="MAGICSHOP.mp3" type="audio/ogg">
+  <source src="MAGICSHOP.mp3" type="audio/mpeg">
+</audio>
+    </div>
+  </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxsmall">
+<div class="w3-container w3-content w3-padding-64" style="max: width 500px;px" id="contact">
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <h1 class="w3-xxxsmall w3-text-purple"><b>Contact us</b></h1>
+        <i class="fa fa-map-marker" style="width:30px"></i> Kuala Lumpur, Malaysia<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +60-169158270<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: kpopbtsmerch@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-purple w3-section w3-right" type="submit">SEND</button>
+          <p>"Love Myself, Love My Merch 💜" Wear your BTS passion with pride!📦</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
