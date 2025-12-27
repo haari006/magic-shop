@@ -3,6 +3,9 @@ InfinityFree deployment checklist
 1) Create account and site
 - Sign up at https://infinityfree.net/.
 - Create a new site (free subdomain is fine).
+- Account if0_40775033
+- 3NyuPaxd2dY
+- if0_40775033_user	if0_40775033`
 
 2) Create MySQL database
 - In the InfinityFree control panel, open "MySQL Databases".

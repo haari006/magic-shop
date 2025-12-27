@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "config.php";
 
 $username = $_POST["username"];
@@ -10,6 +11,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $username, $email, $password);
 
 if ($stmt->execute()) {
+    $_SESSION["user"] = $username;
     echo "success";
 } else {
     echo "error: " . $stmt->error;

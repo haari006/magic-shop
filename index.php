@@ -325,6 +325,7 @@ body {font-size:16px;margin:0}
       <p><input class="w3-input w3-border" type="text" placeholder="Username" id="loginUser" required></p>
       <p><input class="w3-input w3-border" type="password" placeholder="Password" id="loginPass" required></p>
       <p class="w3-center"><button class="w3-button w3-purple w3-section" type="submit">Login</button></p>
+      <p class="w3-center"><button class="w3-button w3-white w3-border" type="button" id="btnOpenRegister">Register</button></p>
     </form>
   </div>
 </div>
@@ -345,6 +346,7 @@ body {font-size:16px;margin:0}
 </div>
 
 <script>
+const isLoggedIn = <?php echo isset($_SESSION["user"]) ? "true" : "false"; ?>;
 function w3_open(){
   document.getElementById("mySidebar").style.display="block";
   document.getElementById("myOverlay").style.display="block";
@@ -364,8 +366,13 @@ function closeModal(id){
 let btnLogin = document.getElementById("btnLogin");
 let btnRegister = document.getElementById("btnRegister");
 let btnLogout = document.getElementById("btnLogout");
+let btnOpenRegister = document.getElementById("btnOpenRegister");
 if (btnLogin) btnLogin.onclick = ()=>{ document.getElementById("loginModal").style.display = "block"; }
 if (btnRegister) btnRegister.onclick = ()=>{ document.getElementById("registerModal").style.display = "block"; }
+if (btnOpenRegister) btnOpenRegister.onclick = ()=> {
+  closeModal("loginModal");
+  document.getElementById("registerModal").style.display = "block";
+}
 if (btnLogout) btnLogout.onclick = ()=> {
   fetch("logout.php").then(r=>r.text()).then(t=>{ if(t.trim()==="success") location.reload(); });
 }
@@ -389,6 +396,10 @@ document.getElementById("loginForm").onsubmit = function(e){
   });
 }
 async function startCheckout(button){
+  if (!isLoggedIn) {
+    document.getElementById("loginModal").style.display = "block";
+    return;
+  }
   let productId = button.dataset.productId;
   if (!productId) return;
   let originalText = button.textContent;
@@ -402,6 +413,10 @@ async function startCheckout(button){
     });
     let data = await res.json();
     if (!res.ok || !data.url) {
+      if (data && data.error === "login_required") {
+        document.getElementById("loginModal").style.display = "block";
+        return;
+      }
       throw new Error(data.error || "Unable to start checkout.");
     }
     window.location.href = data.url;

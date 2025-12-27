@@ -10,6 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
+if (!isset($_SESSION["user"])) {
+    http_response_code(401);
+    echo json_encode(["error" => "login_required"]);
+    exit;
+}
+
 $payload = json_decode(file_get_contents("php://input"), true);
 $product_id = "";
 if (is_array($payload) && isset($payload["productId"])) {
